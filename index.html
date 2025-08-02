@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <title>QUIZ GAME</title>
+</head>
+<body>
+  <!-- splash -->
+  <div class="splash-screen" onclick="Start()">
+    <h1>WELCOME CLICK TO START!</h1>
+  </div>
+
+  <!-- bg music -->
+  <audio id="bgm" src="/SOUND/Grieg_ Peer Gynt Suite No. 1 Movement 1 (Morning Mood)  National Symphony Orchestra.mp3" loop></audio>
+
+  <!-- MAIN MENU SCREEN -->
+  <div class="wrapper" id="mainMenu">
+    <div class="title">
+      <h2>QUIZ <br> GAME</h2>
+    </div>
+    <div class="buttons">
+      <button class="play-button" onclick="GoToGame()">Play</button>
+      <button class="settings" onclick="ShowSettings()">Settings</button>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN (initially hidden) -->
+  <div class="wrapper" id="gameScreen" style="display: none;">
+    <div class="title">
+      <h2>SELECT A QUIZ</h2>
+    </div>
+    <button class="settings" onclick="GoBackToMenu()">Back to Menu</button>
+  </div>
+
+  <!-- settings menu -->
+  <div class="settings-menu">
+    <div class="settings-options">
+      <div class="settings-title">
+        <h2>Settings</h2>
+        <p id="close-button">&Cross;</p>
+      </div>
+      <div class="settings-content">
+        <div class="settings-button">
+          <button class="settings-buttons" onclick="Unmute()"><i class="fa-solid fa-volume-high" id="music-icon"></i></button>
+          <div class="settings-buttons"><a href="https://www.facebook.com/christiandale.dechavez.9/" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+          <div class="settings-buttons"><a><i class="fa-brands fa-github"></i></a></div>
+        </div>
+        <div class="scrollable-content">
+          <h3>
+            This game is developed by the ICT Strand representative and still developing the game. You can message me on Facebook for suggestions or issues.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/Javascript/main-menu.js"></script>
+  
+</body>
+</html>
