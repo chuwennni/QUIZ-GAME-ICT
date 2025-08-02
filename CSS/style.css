@@ -15,8 +15,8 @@ html{
 }
 
 body{
-  width: 412px;
-  height: 892px;
+  width: 100vw;
+  height: 100vh;
   font-size: 3rem;
   text-align: center;
   color: white;
