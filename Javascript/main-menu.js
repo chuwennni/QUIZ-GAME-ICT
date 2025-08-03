@@ -1,5 +1,13 @@
 const settingsMenu = document.querySelector('.settings-menu');
 const closeButton = document.getElementById('close-button');
+const startButton = document.getElementById('startButton');
+const answer1 = document.getElementById('answer1')
+const answer2 = document.getElementById('answer2')
+const answer3 = document.getElementById('answer3')
+const answer4 = document.getElementById('answer4')
+const question = document.getElementById('question')
+
+
 
 function ShowSettings() {
   settingsMenu.classList.remove('unshowed');
@@ -53,12 +61,27 @@ function Unmute(){
 
 }
 
+
+
 function GoToGame() {
       mainMenu.style.display = 'none';
       gameScreen.style.display = 'flex'; // match your `.wrapper` flex style
     }
 
-    function GoBackToMenu() {
-      gameScreen.style.display = 'none';
-      mainMenu.style.display = 'flex';
-    }
+function GoBackToMenu() {
+  gameScreen.style.display = 'none';
+  mainMenu.style.display = 'flex';
+}
+function Mathematic(){
+  gameScreen.style.display = 'none'
+  mathQuiz.style.display = 'flex'
+}    
+
+function GoBackToGame() {
+  mathQuiz.style.display = 'none';
+  gameScreen.style.display = 'flex';
+  quizGame.style.visibility = 'hidden'
+  startButton.style.display = 'block'
+  startButton.textContent = 'start'
+  results.style.display = 'none'
+}

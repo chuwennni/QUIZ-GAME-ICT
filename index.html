@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.99, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
   <link rel="stylesheet" href="./CSS/style.css">
-  <title>QUIZ GAME</title>
+  <link rel="icon" type="image/jpeg" href="alden-na-naka-dila.jpeg">
+  <title>QUIZ GAME | BY: ICT Strand</title>
 </head>
 <body>
   <!-- splash -->
@@ -35,7 +36,7 @@
       <h2>SELECT A QUIZ</h2>
     </div>
     <div class="Quizes">
-      <div class="quiz"><h3>MATH</h3></div>
+      <div class="quiz" onclick="Mathematic()"><h3>MATH</h3></div>
       <div class="quiz"><h3>COMING SOON!</h3></div>
       <div class="quiz"><h3>COMING SOON!</h3></div>
       <div class="quiz"><h3>COMING SOON!</h3></div>
@@ -46,6 +47,39 @@
     </div>
     </div>
   </div>
+
+  <!-- math quiz -->
+   <div class="wrapper" id="mathQuiz" style="display: none">
+    <div class="main-game">
+      <div class="title-main-game">
+        <button class="go-back-button" onclick="GoBackToGame()"><i class="fa-solid fa-arrow-circle-left"></i></button>
+        <h2>Math Quiz</h2>
+      </div>
+      <div class="quiz-game" id="quizGame" style="visibility: hidden">
+        <div class="question-container">
+          <h5 id="question"></h5>
+        </div>
+        <div class="answers-for-qustion-container-HAHAHAHA">
+          <div id="answer1" class="answers"></div>
+          <div id="answer2" class="answers"></div>
+          <div id="answer3" class="answers"></div>
+          <div id="answer4" class="answers"></div>
+        </div>
+      </div>
+      <button class="settings" id="startButton">Start</button>
+    </div>
+   </div>
+   
+   <!-- results -->
+
+   <div class="wrapper" id="results" style="display: none">
+    <div class="title-main-game">
+      <button class="go-back-button" onclick="GoBackToGame()"><i class="fa-solid fa-arrow-circle-left"></i></button>
+      <h2>Results</h2>
+    </div>
+    <p id="result"></p>
+    <p id="insult"></p>
+   </div>
 
   <!-- settings menu -->
   <div class="settings-menu">
@@ -62,7 +96,7 @@
         </div>
         <div class="scrollable-content">
           <h3>
-            This game is developed by the ICT Strand representative and still developing the game. You can message me on Facebook for suggestions or issues.
+            This game is developed by the ICT Strand representative (Christian Dale De Chavez) and my wife (Queenerich Danila) she helped for making the qustions, this game is still developing. You can message me on Facebook for suggestions or issues. 
           </h3>
         </div>
       </div>
@@ -70,6 +104,6 @@
   </div>
 
   <script src="./Javascript/main-menu.js"></script>
-  
+  <script type="module" src="./Javascript/quiz.js"></script>
 </body>
 </html>
